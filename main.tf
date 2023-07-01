@@ -24,6 +24,8 @@ resource "aws_subnet" "example_subnet" {
   }
 }
 
+
+
 # Security Group
 resource "aws_security_group" "example_sg" {
   vpc_id = aws_vpc.example_vpc.id
@@ -53,6 +55,7 @@ resource "aws_instance" "instance1" {
   instance_type = "t2.micro"  # Update with your desired instance type
   subnet_id     = aws_subnet.example_subnet.id
   vpc_security_group_ids = [aws_security_group.example_sg.id]
+  associate_public_ip_address = true
   key_name      = "jujukey01072023"
   user_data              = <<EOF
                           #!/bin/bash
@@ -70,6 +73,7 @@ resource "aws_instance" "instance2" {
   instance_type = "t2.micro"  # Update with your desired instance type
   subnet_id     = aws_subnet.example_subnet.id
   vpc_security_group_ids = [aws_security_group.example_sg.id]
+  associate_public_ip_address = true
   key_name      = "jujukey01072023"
   user_data              = <<EOF
                           #!/bin/bash
