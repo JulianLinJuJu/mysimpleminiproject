@@ -80,11 +80,6 @@ resource "aws_instance" "instance2" {
     Name = "Juju-Webserver-2"
   }
 }
-  # Key Pair
-/*resource "aws_key_pair" "example_keypair" {
-  key_name   = "jujukey01072023"  # Update with your desired key pair name
-  public_key = file("~/.ssh/id_rsa.pub")  # Update with your SSH public key path
-}
-}
+
 
 
