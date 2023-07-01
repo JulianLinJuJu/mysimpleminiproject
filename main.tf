@@ -79,7 +79,7 @@ resource "aws_instance" "instance2" {
   tags = {
     Name = "Juju-Webserver-2"
   }
-
+}
   # Key Pair
 /*resource "aws_key_pair" "example_keypair" {
   key_name   = "jujukey01072023"  # Update with your desired key pair name
