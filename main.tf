@@ -52,7 +52,7 @@ resource "aws_instance" "instance1" {
   instance_type = "t2.micro"  # Update with your desired instance type
   subnet_id     = aws_subnet.example_subnet.id
   security_group_ids = [aws_security_group.example_sg.id]
-  key_name      = aws_key_pair.example_keypair.key_name
+  key_name      = "jujukey01072023"
   user_data              = <<EOF
                           #!/bin/bash
                           sudo yum update -y
@@ -69,7 +69,7 @@ resource "aws_instance" "instance2" {
   instance_type = "t2.micro"  # Update with your desired instance type
   subnet_id     = aws_subnet.example_subnet.id
   security_group_ids = [aws_security_group.example_sg.id]
-  key_name      = aws_key_pair.example_keypair.key_name
+  key_name      = "jujukey01072023"
   user_data              = <<EOF
                           #!/bin/bash
                           sudo yum update -y
@@ -81,7 +81,7 @@ resource "aws_instance" "instance2" {
   }
 
   # Key Pair
-resource "aws_key_pair" "example_keypair" {
+/*resource "aws_key_pair" "example_keypair" {
   key_name   = "jujukey01072023"  # Update with your desired key pair name
   public_key = file("~/.ssh/id_rsa.pub")  # Update with your SSH public key path
 }
