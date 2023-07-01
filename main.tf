@@ -51,7 +51,7 @@ resource "aws_instance" "instance1" {
   ami           = "ami-0e850bfa37f7efe88"  # Update with your desired AMI ID
   instance_type = "t2.micro"  # Update with your desired instance type
   subnet_id     = aws_subnet.example_subnet.id
-  security_group_ids = [aws_security_group.example_sg.id]
+  vpc_security_group_ids = [aws_security_group.example_sg.id]
   key_name      = "jujukey01072023"
   user_data              = <<EOF
                           #!/bin/bash
@@ -68,7 +68,7 @@ resource "aws_instance" "instance2" {
   ami           = "ami-0e850bfa37f7efe88"  # Update with your desired AMI ID
   instance_type = "t2.micro"  # Update with your desired instance type
   subnet_id     = aws_subnet.example_subnet.id
-  security_group_ids = [aws_security_group.example_sg.id]
+  vpc_security_group_ids = [aws_security_group.example_sg.id]
   key_name      = "jujukey01072023"
   user_data              = <<EOF
                           #!/bin/bash
