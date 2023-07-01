@@ -1,7 +1,8 @@
 # Provider configuration
-provider "aws" {
+/*provider "aws" {
   region = "ca-central-1"  # Update with your desired region
 }
+*/
 
 # VPC
 resource "aws_vpc" "example_vpc" {
